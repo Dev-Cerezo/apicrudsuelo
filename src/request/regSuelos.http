@@ -1,0 +1,65 @@
+@api = http://localhost:2000/regSuelo
+@api2 = http://localhost:2000/regSuelofecha
+
+###
+GET {{api}}
+
+###
+
+POST {{api}}
+Content-Type: application/json
+
+ {
+    "pk_wap_rsuelo_pro_01": 2,
+    "humedad": 1.5,
+    "fecha": "2022-10-10T00:00:00.000Z",
+    "cultivo_revisado": "02577 cerzas",
+    "rancho_revisado": "los sauces",
+    "metodo_aplicacion": "charquera",
+    "status_producto": "no",
+    "presion_riego_valvula": 1.2,
+    "presion_riego_cintilla_manguera": 2.3,
+    "ph_gotero": 5.6,
+    "ph_bomba": 8.2,
+    "ph_tierra": 3,
+    "ce_gotero": 1,
+    "ce_bomba": 2,
+    "ce_tierra": 5,
+    "evapotranspiracion": 5,
+    "comentario_general": "Hubo cambio de enmanguerado"
+  }
+
+###
+
+GET {{api}}/1
+
+###
+
+GET {{api2}}/2022-07-10T00:00:00.000Z
+
+###
+DELETE {{api}}/2
+
+###
+PUT  {{api}}/1
+Content-Type: application/json
+
+ {
+    "pk_wap_rsuelo_pro_01": 2,
+    "humedad": 3.3,
+    "fecha": "2022-11-10T00:00:00.000Z",
+    "cultivo_revisado": "02577 cerzas",
+    "rancho_revisado": "los sauces",
+    "metodo_aplicacion": "charquera",
+    "status_producto": "no",
+    "presion_riego_valvula": 1.2,
+    "presion_riego_cintilla_manguera": 2.3,
+    "ph_gotero": 5.6,
+    "ph_bomba": 8.2,
+    "ph_tierra": 3,
+    "ce_gotero": 1,
+    "ce_bomba": 2,
+    "ce_tierra": 5,
+    "evapotranspiracion": 5,
+    "comentario_general": "Hubo cambio de "
+  }
